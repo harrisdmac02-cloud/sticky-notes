@@ -1,0 +1,16 @@
+.sticky-note {
+    background-color: #fff9c4;
+    border: 2px solid #f57c00;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.sticky-note:hover {
+    transform: rotate(1deg);
+}
+body {
+    background-color: #f8f9fa;
+}
+.card-text {
+    font-family: 'Comic Sans MS', cursive; /* Fun font for notes */
+}

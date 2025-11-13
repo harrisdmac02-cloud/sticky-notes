@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card sticky-note">
+    <div class="card-body">
+        <h1>{{ note.title }}</h1>
+        <p class="card-text">{{ note.content }}</p>
+        <p><small class="text-muted">Created: {{ note.created_at }} | Updated: {{ note.updated_at }}</small></p>
+        <a href="{% url 'note_list' %}" class="btn btn-secondary">Back to List</a>
+        <a href="{% url 'note_update' note.pk %}" class="btn btn-warning">Edit</a>
+        <a href="{% url 'note_delete' note.pk %}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% endblock %}
