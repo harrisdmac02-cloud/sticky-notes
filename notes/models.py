@@ -1,10 +1,13 @@
 from django.db import models
 
 class Note(models.Model):
-    title = models.CharField(max_length=200, blank=False)  # Enforce required and max_length
-    content = models.TextField(blank=False)  # Enforce required
+    title = models.CharField(max_length=200)
+    content = models.TextField(blank=False)  # Add blank=False to require content
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
+
+    def clean(self):  # Optional: Custom clean for extra validation
+        super().clean()
