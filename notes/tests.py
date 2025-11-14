@@ -14,15 +14,15 @@ class NoteModelTest(TestCase):
     def test_title_max_length(self):
         long_title = 'x' * 201
         self.note.title = long_title
-        with self.assertRaises(Exception):  # CharField enforces max_length
-            self.note.save()
+        with self.assertRaises(Exception):
+            self.note.full_clean()  # Explicitly validate
         self.note.refresh_from_db()
-        self.assertNotEqual(self.note.title, long_title)
+        self.assertNotEqual(self.note.title, long_title)  # Still original)
 
     def test_content_required(self):
         note = Note(title='Title', content='')
-        with self.assertRaises(Exception):
-            note.save()
+        with self.assertRaises(Exception):  # ValidationError from blank=False
+            note.full_clean()  # Explicitly validate
 
 class NoteFormTest(TestCase):
     def test_form_valid(self):
