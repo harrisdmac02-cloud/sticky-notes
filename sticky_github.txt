@@ -1,0 +1,2 @@
+GitHub Repo: https://github.com/harrisdmac02-cloud/sticky-notes
+README Review: Original content, references Django docs only.

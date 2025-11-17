@@ -1,0 +1,1 @@
+Django==4.2.7  # Or your version; check with `pip show django`

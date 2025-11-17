@@ -2,6 +2,16 @@ from django import forms
 from .models import Note
 
 class NoteForm(forms.ModelForm):
+    """
+    Form for creating and editing Note instances.
+    
+    Inherits from ModelForm to auto-map fields from Note model.
+    Customizes widgets for Bootstrap styling and placeholders.
+    
+    Meta:
+        model: Note
+        fields: ['title', 'content']
+    """
     class Meta:
         model = Note
         fields = ['title', 'content']
