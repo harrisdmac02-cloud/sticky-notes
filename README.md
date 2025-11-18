@@ -12,12 +12,12 @@ This is a simple CRUD app for managing sticky notes, built with Django. Users ca
 - **Styling**: Bootstrap 5 CDN + custom CSS for a fun, rotatable card design.
 
 # Setup Instructions
-1. Clone the repo: `git clone <your-repo-url>`.
-2. Install dependencies: `pip install -r requirements.txt`.
-3. Run migrations: `python manage.py migrate`.
-4. Create superuser (optional): `python manage.py createsuperuser`.
-5. Start server: `python manage.py runserver`.
-6. Visit `http://127.0.0.1:8000/notes/` to add/view notes.
+Clone the repo: `git clone <your-repo-url>`. Then install dependencies: `pip install -r requirements.txt` and run migrations: `python manage.py migrate`. Create superuser (optional): `python manage.py createsuperuser`.
+
+Please start server: `python manage.py runserver`. You can visit `http://127.0.0.1:8000/notes/` to add/view notes.
+
+## System requirement:
+OS: Windows 10 and 11
 
 # Project Structure
 sticky_notes/
@@ -37,4 +37,4 @@ sticky_notes/
 
 
 
-"# sticky-notes"
+## Thank you for using this
