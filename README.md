@@ -37,4 +37,4 @@ sticky_notes/
 
 
 
-## Thank you for using this
+## Thank you for using this appilcation.
